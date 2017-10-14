@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xrtd", "xrtd.csproj", "{0EE13B85-52A7-16A9-B1A7-E265AC6F684D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xrtd.Editor", "xrtd.Editor.csproj", "{54E6D9F4-5E1E-820F-D364-945C86510107}"
