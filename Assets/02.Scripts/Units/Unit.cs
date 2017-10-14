@@ -9,6 +9,8 @@ public class Unit : MonoBehaviour
     public int ID;
     public Transform Target;
     public IMove MoveController;
+    public IAttack AttackController;
+    public IGetDamage HealthController;
 
 
     public float FaultDistance = 10;
@@ -17,12 +19,25 @@ public class Unit : MonoBehaviour
     private void Start()
     {
         if (MoveController == null)
+            MoveController = GetComponent<IMove>();
+        if (MoveController == null)
             MoveController = transform.GetComponentInChildren<IMove>();
+        if (MoveController != null) MoveController.SetParent(this);
+        if (AttackController == null)
+            AttackController = transform.GetComponentInChildren<IAttack>();
+        if (AttackController != null) AttackController.SetParent(this);
+        if (HealthController == null)
+            HealthController = transform.GetComponentInChildren<IGetDamage>();
+        if (HealthController != null) HealthController.SetParent(this);
+        if (MoveController != null)
+            MoveController.Target = Target;
     }
 
     public enum UnitType
     {
+        Base=0,
         Soldier = 1,
+        Zombie = 2,
     }
 
     private void OnDestroy()
@@ -32,12 +47,23 @@ public class Unit : MonoBehaviour
 
     private void Update()
     {
-        if (MoveController != null)
+        if (MarkersManager.inst.mainBase != null)
         {
-            MoveController.Target = Target;
-            MoveController.Move();
-            if (MoveController.isMove)
-                DPanel.Add(this, string.Format("Unit type <color=yellow>[{0}]</color> with ID <color=blue>[{1}]</color> was <color=green>MOVED</color> to target", Type, ID));
+            if (HealthController != null)
+            {
+                if (!HealthController.isLive)
+                    return;
+            }
+            if (AttackController != null)
+            {
+                AttackController.Attack();
+                if (AttackController.isAttack)
+                    return;
+            }
+            if (MoveController != null)
+            {
+                MoveController.Move();
+            }
         }
     }
 }

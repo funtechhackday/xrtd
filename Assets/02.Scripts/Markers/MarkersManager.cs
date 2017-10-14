@@ -16,33 +16,32 @@ public class MarkersManager : MonoBehaviour {
     public Marker mainBase;
     public List<Marker> markers = new List<Marker>();
     public List<Unit> units = new List<Unit>();
+    public List<Unit> enemys = new List<Unit>();
 
     public List<MatchMarkersUnits> matchs = new List<MatchMarkersUnits>();
 
-    public void MarkerTracked(Marker marker)
+    public void MarkerLost(Marker marker)
     {
-        /*if (markers.Count > 0)
+        if(marker.Type == Marker.MarkerType.MainBase)
         {
-            for (int i = 0; i < markers.Count; i++)
+            mainBase = null;
+            EnemySpawner.inst.StopSpawn();            
+            return;
+        }
+        if (matchs.Count > 0)
+        {
+            foreach (var m in matchs)
             {
-                if (markers[i].Type == marker.Type)
-                {
-                    if (markers[i].istracked == false)
-                    {
-                        marker.ID = markers[i].ID;
-                        markers[i] = marker;
-                        DPanel.Add(this, string.Format("New marker type <color=yellow>[{0}]</color> was <color=red>replace</color> to ID <color=blue>[{1}]</color>", marker.Type, marker.ID));
-                        return;
-                    }
-                }
+                m.Remove(marker);
             }
         }
-        marker.ID = markers.Count;
-        markers.Add(marker);
-        */
+    }
+    public void MarkerTracked(Marker marker)
+    {
         if (marker.Type == Marker.MarkerType.MainBase)
         {
             mainBase = marker;
+            EnemySpawner.inst.StartSpawn();
         }
         else
         {
@@ -50,6 +49,7 @@ public class MarkersManager : MonoBehaviour {
             {
                 foreach (var m in matchs)
                 {
+
                     if (m.isLackMarker())
                     {
                         m.Set(marker);
@@ -103,6 +103,12 @@ public class MarkersManager : MonoBehaviour {
             DPanel.Add(this, string.Format("New UNIT type <color=yellow>[{0}]</color> was <color=red>ADDED</color> to array with ID <color=blue>[{1}]</color>", unit.Type, unit.ID));
         }
     }
+    public void AddNewEnemy(Unit unit)
+    {
+            unit.Target = mainBase.MarkerPosition;
+            enemys.Add(unit);
+            DPanel.Add(this, string.Format("New UNIT type <color=yellow>[{0}]</color> was <color=red>ADDED</color> to array with ID <color=blue>[{1}]</color>", unit.Type, unit.ID));
+    }
 
     public void RemoweUnit(Unit unit)
     {
@@ -111,6 +117,10 @@ public class MarkersManager : MonoBehaviour {
             foreach (var m in matchs)
                 m.Remove(unit);
         DPanel.Add(this, string.Format("UNIT type <color=yellow>[{0}]</color> was <color=red>REMOWED</color> from array with ID <color=blue>[{1}]</color>", unit.Type, unit.ID));
+    }
+    public void RemoweEnemy(Unit unit)
+    {
+        enemys.Remove(unit);        
     }
 }
 
@@ -147,6 +157,8 @@ public class MatchMarkersUnits
     {
         this.marker = marker;
         markerID = marker.ID;
+        if (unit != null)
+            unit.Target = marker.MarkerPosition;
     }
     public Marker Set(Unit unit)
     {
@@ -156,7 +168,7 @@ public class MatchMarkersUnits
     }
     public Unit Get(Marker marker)
     {
-        if (this.marker == marker)
+        if (this.marker.Equals(marker))
             return unit;
         return null;
     }
@@ -174,13 +186,16 @@ public class MatchMarkersUnits
     }
     public void Remove(Marker marker)
     {
-        if (this.marker == marker)
-            marker=null;
+        if (this.marker.Equals(marker))
+        {
+            this.marker = null;
+            unit.Target = null;
+        }
     }
     public void Remove(Unit unit)
     {
-        if (this.unit == unit)
-            unit=null;
+        if (this.unit.Equals(unit))
+            this.unit=null;
     }
     public bool isLackUnit()
     {
@@ -194,11 +209,11 @@ public class MatchMarkersUnits
     }
     public bool isMine(Marker marker)
     {
-        return (this.marker == marker);
+        return (this.marker.Equals(marker));
     }
     public bool isMine(Unit unit)
     {
-        return (this.unit == unit);
+        return (this.unit.Equals(unit));
     }
 }
 

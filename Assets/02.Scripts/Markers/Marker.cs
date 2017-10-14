@@ -32,6 +32,7 @@ public class Marker : MonoBehaviour, ITrackableEventHandler
         else
         {
             istracked = false;
+            MarkersManager.inst.MarkerLost(this);
             DPanel.Add(this, string.Format("<color=red>Lost</color> marker type <color=yellow>[{0}]</color> with ID<color=blue>[{1}]</color>", Type, ID));
         }
     }

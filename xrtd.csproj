@@ -223,10 +223,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02.Scripts\Debug\DebugPanel.cs" />
+    <Compile Include="Assets\02.Scripts\Markers\Marker.cs" />
+    <Compile Include="Assets\02.Scripts\Markers\MarkersManager.cs" />
+    <Compile Include="Assets\02.Scripts\Units\EnemySpawner.cs" />
+    <Compile Include="Assets\02.Scripts\Units\IAttack.cs" />
+    <Compile Include="Assets\02.Scripts\Units\IGetDamage.cs" />
     <Compile Include="Assets\02.Scripts\Units\IMove.cs" />
-    <Compile Include="Assets\02.Scripts\Units\Marker.cs" />
-    <Compile Include="Assets\02.Scripts\Units\MarkersManager.cs" />
-    <Compile Include="Assets\02.Scripts\Units\SoldierFollowTarget.cs" />
     <Compile Include="Assets\02.Scripts\Units\Unit.cs" />
     <Compile Include="Assets\02.Scripts\Units\UnitMove.cs" />
     <Compile Include="Assets\02.Scripts\Units\UnitSpawner.cs" />
