@@ -17,12 +17,15 @@ public class IAttack : MonoBehaviour
 
     public void SetParent(Unit parent) { this.parent = parent; myType = parent.Type; }
 
+    bool isCoroutineStart = false;
+
     public virtual void Attack()
     {
         if(target != null && target.isLive && inAttackRadius(target.transform.position))
         {
             isAttack = true;
-            StartCoroutine(DoAttack());
+            if (!isCoroutineStart)
+                StartCoroutine(DoAttack());
             return;
         }
         target = null;
@@ -66,8 +69,12 @@ public class IAttack : MonoBehaviour
     public virtual void UnderAttack(IAttack enemy)
     {
         if (target == null)
-            if (inAttackRadius(enemy.transform.position))
-                target = enemy.parent.HealthController;
+        //if (inAttackRadius(enemy.transform.position))
+        {
+            target = enemy.parent.HealthController;
+            if (parent.Type == Unit.UnitType.Zombie)
+                parent.MoveController.Target = enemy.transform;
+        }
     }
 
     bool inAttackRadius(Vector3 pos)
@@ -82,11 +89,16 @@ public class IAttack : MonoBehaviour
     {
         while (target != null && target.isLive)
         {
+            isCoroutineStart = true;
             target.GetDamage(this);
+            parent.transform.LookAt(new Vector3((target.transform.position.x), 0, (target.transform.position.z)));
             DPanel.Add(this, string.Format( "Unit <color=yellow>{0}</color> attacks unit <color=red>{1}</color>",parent.Type,target.parent.Type));
             yield return new WaitForSeconds(TimeBeforeAttacks);
         }
+        if (parent.Type == Unit.UnitType.Zombie)
+            parent.MoveController.Target = MarkersManager.inst.mainBase.MarkerPosition;
         isAttack = false;
+        isCoroutineStart = false;
         StopCoroutine(DoAttack());
     }
 }

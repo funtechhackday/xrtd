@@ -19,7 +19,8 @@ public class UnitMove : IMove
             if (Vector3.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(Target.position.x, Target.position.z)) > FaultDistance)
             {
                 isMove = true;
-                parent.transform.position += (Target.position - transform.position).normalized * MoveSpeed;
+                parent.transform.LookAt(new Vector3((Target.transform.position.x) , 0, (Target.transform.position.z)));
+                parent.transform.position += (new Vector3(Target.position.x - transform.position.x, 0, Target.position.z - transform.position.z).normalized * MoveSpeed);
                 //transform.position = Vector3.Lerp(transform.position, Target.position, MoveSpeed);
             }
             else

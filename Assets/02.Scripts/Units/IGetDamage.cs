@@ -34,7 +34,7 @@ public class IGetDamage : MonoBehaviour
                 }
         }
         
-        Destroy(parent.gameObject,.2f);
+        Destroy(parent.gameObject,2f);
     }
     public virtual void GetDamage(IAttack enemy)
     {

@@ -21,9 +21,7 @@ public class Marker : MonoBehaviour, ITrackableEventHandler
 
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
-        if (newStatus == TrackableBehaviour.Status.DETECTED
-            || newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED
-            || newStatus == TrackableBehaviour.Status.TRACKED)
+        if (newStatus == TrackableBehaviour.Status.TRACKED)
         {            
             MarkersManager.inst.MarkerTracked(this);
             istracked = true;
