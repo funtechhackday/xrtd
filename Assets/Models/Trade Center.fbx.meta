@@ -1,0 +1,525 @@
+fileFormatVersion: 2
+guid: 1350fb65039487b4da25828fe95c3d68
+timeCreated: 1508058680
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box01
+    100002: Box02
+    100004: Box02_MeshPart0
+    100006: Box02_MeshPart1
+    100008: Box03
+    100010: Box03_MeshPart0
+    100012: Box03_MeshPart1
+    100014: Box04
+    100016: Box05
+    100018: Box06
+    100020: Box07
+    100022: Box08
+    100024: Box09
+    100026: Box10
+    100028: Box11
+    100030: Box12
+    100032: Box13
+    100034: Box14
+    100036: Box15
+    100038: Box16
+    100040: Box17
+    100042: Box18
+    100044: Box19
+    100046: Box20
+    100048: Box21
+    100050: Box22
+    100052: Box23
+    100054: Box24
+    100056: 'camera #50'
+    100058: Cylinder01
+    100060: Cylinder02
+    100062: Cylinder03
+    100064: Cylinder04
+    100066: Cylinder05
+    100068: Cylinder06
+    100070: Cylinder07
+    100072: Cylinder08
+    100074: Cylinder09
+    100076: Foliage01
+    100078: Foliage02
+    100080: Foliage03
+    100082: Foliage04
+    100084: Foliage05
+    100086: Foliage06
+    100088: 'light #46'
+    100090: 'light #47'
+    100092: 'light #48'
+    100094: 'light #49'
+    100096: lights
+    100098: Omni01
+    100100: Omni02
+    100102: Plane01
+    100104: tower02
+    100106: tower1
+    100108: //RootNode
+    100110: Trade Center
+    400000: Box01
+    400002: Box02
+    400004: Box02_MeshPart0
+    400006: Box02_MeshPart1
+    400008: Box03
+    400010: Box03_MeshPart0
+    400012: Box03_MeshPart1
+    400014: Box04
+    400016: Box05
+    400018: Box06
+    400020: Box07
+    400022: Box08
+    400024: Box09
+    400026: Box10
+    400028: Box11
+    400030: Box12
+    400032: Box13
+    400034: Box14
+    400036: Box15
+    400038: Box16
+    400040: Box17
+    400042: Box18
+    400044: Box19
+    400046: Box20
+    400048: Box21
+    400050: Box22
+    400052: Box23
+    400054: Box24
+    400056: 'camera #50'
+    400058: Cylinder01
+    400060: Cylinder02
+    400062: Cylinder03
+    400064: Cylinder04
+    400066: Cylinder05
+    400068: Cylinder06
+    400070: Cylinder07
+    400072: Cylinder08
+    400074: Cylinder09
+    400076: Foliage01
+    400078: Foliage02
+    400080: Foliage03
+    400082: Foliage04
+    400084: Foliage05
+    400086: Foliage06
+    400088: 'light #46'
+    400090: 'light #47'
+    400092: 'light #48'
+    400094: 'light #49'
+    400096: lights
+    400098: Omni01
+    400100: Omni02
+    400102: Plane01
+    400104: tower02
+    400106: tower1
+    400108: //RootNode
+    400110: Trade Center
+    2000000: 'camera #50'
+    2300000: Box01
+    2300002: Box02_MeshPart0
+    2300004: Box02_MeshPart1
+    2300006: Box03_MeshPart0
+    2300008: Box03_MeshPart1
+    2300010: Box04
+    2300012: Box05
+    2300014: Box06
+    2300016: Box07
+    2300018: Box08
+    2300020: Box09
+    2300022: Box10
+    2300024: Box11
+    2300026: Box12
+    2300028: Box13
+    2300030: Box14
+    2300032: Box15
+    2300034: Box16
+    2300036: Box17
+    2300038: Box18
+    2300040: Box19
+    2300042: Box20
+    2300044: Box21
+    2300046: Box22
+    2300048: Box23
+    2300050: Box24
+    2300052: Cylinder01
+    2300054: Cylinder02
+    2300056: Cylinder03
+    2300058: Cylinder04
+    2300060: Cylinder05
+    2300062: Cylinder06
+    2300064: Cylinder07
+    2300066: Cylinder08
+    2300068: Cylinder09
+    2300070: Foliage01
+    2300072: Foliage02
+    2300074: Foliage03
+    2300076: Foliage04
+    2300078: Foliage05
+    2300080: Foliage06
+    2300082: Plane01
+    3300000: Box01
+    3300002: Box02_MeshPart0
+    3300004: Box02_MeshPart1
+    3300006: Box03_MeshPart0
+    3300008: Box03_MeshPart1
+    3300010: Box04
+    3300012: Box05
+    3300014: Box06
+    3300016: Box07
+    3300018: Box08
+    3300020: Box09
+    3300022: Box10
+    3300024: Box11
+    3300026: Box12
+    3300028: Box13
+    3300030: Box14
+    3300032: Box15
+    3300034: Box16
+    3300036: Box17
+    3300038: Box18
+    3300040: Box19
+    3300042: Box20
+    3300044: Box21
+    3300046: Box22
+    3300048: Box23
+    3300050: Box24
+    3300052: Cylinder01
+    3300054: Cylinder02
+    3300056: Cylinder03
+    3300058: Cylinder04
+    3300060: Cylinder05
+    3300062: Cylinder06
+    3300064: Cylinder07
+    3300066: Cylinder08
+    3300068: Cylinder09
+    3300070: Foliage01
+    3300072: Foliage02
+    3300074: Foliage03
+    3300076: Foliage04
+    3300078: Foliage05
+    3300080: Foliage06
+    3300082: Plane01
+    4300000: Box02_MeshPart0
+    4300002: Box02_MeshPart1
+    4300004: Cylinder01
+    4300006: Cylinder02
+    4300008: Box01
+    4300010: Cylinder04
+    4300012: Cylinder03
+    4300014: Box03_MeshPart0
+    4300016: Box03_MeshPart1
+    4300018: Cylinder05
+    4300020: Cylinder06
+    4300022: Box04
+    4300024: Cylinder07
+    4300026: Cylinder08
+    4300028: Cylinder09
+    4300030: Box05
+    4300032: Box06
+    4300034: Foliage01
+    4300036: Foliage02
+    4300038: Foliage03
+    4300040: Foliage04
+    4300042: Foliage05
+    4300044: Foliage06
+    4300046: Box07
+    4300048: Box08
+    4300050: Box09
+    4300052: Box10
+    4300054: Box11
+    4300056: Box12
+    4300058: Box13
+    4300060: Box14
+    4300062: Box15
+    4300064: Box16
+    4300066: Box17
+    4300068: Box18
+    4300070: Box19
+    4300072: Box20
+    4300074: Box21
+    4300076: Box22
+    4300078: Box23
+    4300080: Box24
+    4300082: Plane01
+    10800000: 'light #46'
+    10800002: 'light #47'
+    10800004: 'light #48'
+    10800006: 'light #49'
+    10800008: Omni01
+    10800010: Omni02
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 82b7c05c376a82e4f919bb294ddb1832, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default2
+    second: {fileID: 2100000, guid: 1b07751b5dc284d40903f3e33d5683b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default3
+    second: {fileID: 2100000, guid: 81eee44609d61e245ae94163cb4abd71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: 7abb038fa2e8f99498b6572c8e587529, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default2
+    second: {fileID: 2100000, guid: 46722e724ab86c5468767621a2d070ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default3
+    second: {fileID: 2100000, guid: e5155d68f62b03c439155b2c9f4bfe36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 04 - Default
+    second: {fileID: 2100000, guid: 17f91cc8cead2c24391e32cbdaea4cea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 04 - Default2
+    second: {fileID: 2100000, guid: ee3eda9a8f413cf40a88406db3254b0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 04 - Default3
+    second: {fileID: 2100000, guid: 1308958d99e663944aafc1087e5eb054, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 05 - Default
+    second: {fileID: 2100000, guid: 6001832cbf48b2d49bcf7927d24f01e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 05 - Default2
+    second: {fileID: 2100000, guid: 828ccef7fbbc2ce4b8b427a3673d2420, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 06 - Default
+    second: {fileID: 2100000, guid: 62856dd12e5273e48bb22ed0bd14cb08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 08 - Default
+    second: {fileID: 2100000, guid: 4401c8ca93f4c6842b8b4881a573dd6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Branch0
+    second: {fileID: 2100000, guid: af701c826ce3db6418243e9b8119fb2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Canopy
+    second: {fileID: 2100000, guid: 79a0285bd70ded745a00bebe7764232e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #123'
+    second: {fileID: 2100000, guid: 1bf4836df62dbc54b8d32c29cb1496ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #27'
+    second: {fileID: 2100000, guid: 5154d9f5c84255f48b78d11585b9d62b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #272'
+    second: {fileID: 2100000, guid: 686bc5845632894488a9652a771d4929, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #273'
+    second: {fileID: 2100000, guid: 303b2ba1cc7004b45b1db00525dfcbd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trunk
+    second: {fileID: 2100000, guid: 3df12da7ebd3d004d8143a9868cb3b64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x737373
+    second: {fileID: 2100000, guid: 3d7135ff2316f4d4a9c2ede2d7615e5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x73737310
+    second: {fileID: 2100000, guid: 4a14238b4ea09e34396a681e0c50face, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x73737311
+    second: {fileID: 2100000, guid: 576a40b5753a6604789826f55f8414df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x73737312
+    second: {fileID: 2100000, guid: e8b3ae0b421840b4a84148f05b14b875, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x73737313
+    second: {fileID: 2100000, guid: 7ddeffe5f8a219e4abcf2e9592b5bc13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x73737314
+    second: {fileID: 2100000, guid: 1ae7bfa8ca6100d45924ad16527e44a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x73737315
+    second: {fileID: 2100000, guid: 80f82bae026a9414f962e3b0c6c9e962, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x73737316
+    second: {fileID: 2100000, guid: a66034f9820a04d469a1114fd4f7f77a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x73737317
+    second: {fileID: 2100000, guid: 483992a25bb6b5548a1e4bba792946b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x73737318
+    second: {fileID: 2100000, guid: 2a9df77d3675f3a41bf1beda1f0dd6ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x7373732
+    second: {fileID: 2100000, guid: 03c96bd81f48b9d479ab56337ad8e5b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x7373733
+    second: {fileID: 2100000, guid: 8fbdf70e8f5c6b44799ec6cdc909f639, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x7373734
+    second: {fileID: 2100000, guid: 882c7574a5e08524a9781b9d55e3ce8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x7373735
+    second: {fileID: 2100000, guid: 875621a1141c49840b334d69c12f6968, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x7373736
+    second: {fileID: 2100000, guid: 77e76d76a10a3204ab4126522a51d3b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x7373737
+    second: {fileID: 2100000, guid: 4bcf5d3169d31dc478bcb974a96302ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x7373738
+    second: {fileID: 2100000, guid: cf83ad0f5d385c44ba2f91613967f0e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0x7373739
+    second: {fileID: 2100000, guid: 6e13ba221b1696c4990dbb832790d2ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wireframe_color_0xFFFFFF
+    second: {fileID: 2100000, guid: d0ba887a5d9a0ed4e9396dc8dfa9cd73, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
