@@ -19,8 +19,17 @@ public class EnemySpawner : MonoBehaviour
     public GameObject EnemyPrefab;
     public Transform Enemys;
 
+    public int MaxEnemyOnStage = 0;
+    public int CurrentEnemyOnStage = 0;
+
+    private void Start()
+    {
+        MenuUICanvas.onStageReady += StartSpawn;
+    }
+
     public void StartSpawn()
     {
+        MaxEnemyOnStage=GamePlayMenuHandler.inst.GetCurStage(MenuUICanvas.inst.GetStageCount()).EnemyCount;
         StartCoroutine(Spawn());
     }
     public void StopSpawn()
@@ -30,7 +39,8 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        while(MarkersManager.inst.mainBase != null)
+
+        while (MarkersManager.inst.mainBase != null && MaxEnemyOnStage > CurrentEnemyOnStage)
         {
             var spawn = GetRandomPlace();
             if (spawn != null)
@@ -39,6 +49,7 @@ public class EnemySpawner : MonoBehaviour
                 var unit = e.GetComponent<Unit>();
                 if(unit!=null)
                 MarkersManager.inst.AddNewEnemy(unit);
+                CurrentEnemyOnStage++;
             }
             yield return new WaitForSeconds(spawnTime);
         }

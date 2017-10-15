@@ -41,7 +41,6 @@ public class MarkersManager : MonoBehaviour {
         if (marker.Type == Marker.MarkerType.MainBase)
         {
             mainBase = marker;
-            EnemySpawner.inst.StartSpawn();
         }
         else
         {

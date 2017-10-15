@@ -225,6 +225,11 @@
     <Compile Include="Assets\02.Scripts\Debug\DebugPanel.cs" />
     <Compile Include="Assets\02.Scripts\Markers\Marker.cs" />
     <Compile Include="Assets\02.Scripts\Markers\MarkersManager.cs" />
+    <Compile Include="Assets\02.Scripts\Stages\StagesModel.cs" />
+    <Compile Include="Assets\02.Scripts\UI\FocusMode.cs" />
+    <Compile Include="Assets\02.Scripts\UI\GamePlayMenuHandler.cs" />
+    <Compile Include="Assets\02.Scripts\UI\MenuUICanvas.cs" />
+    <Compile Include="Assets\02.Scripts\UI\UILookAt.cs" />
     <Compile Include="Assets\02.Scripts\Units\EnemySpawner.cs" />
     <Compile Include="Assets\02.Scripts\Units\IAttack.cs" />
     <Compile Include="Assets\02.Scripts\Units\IGetDamage.cs" />

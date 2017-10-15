@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Unit : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Unit : MonoBehaviour
     public IMove MoveController;
     public IAttack AttackController;
     public IGetDamage HealthController;
+    public Image HPBar;
 
     public float FaultDistance = 10;
     public float MoveSpeed = .3f;
@@ -34,6 +36,8 @@ public class Unit : MonoBehaviour
         if (HealthController != null) HealthController.SetParent(this);
         if (MoveController != null)
             MoveController.Target = Target;
+        if (HPBar == null)
+            HPBar = transform.GetComponentInChildren<Image>();
     }
 
     public enum UnitType

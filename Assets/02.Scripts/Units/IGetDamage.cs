@@ -33,20 +33,28 @@ public class IGetDamage : MonoBehaviour
                     break;
                 }
         }
-        
-        Destroy(parent.gameObject,2f);
+
+        Destroy(parent.gameObject, 2f);
     }
     public virtual void GetDamage(IAttack enemy)
     {
         CurrentHealth -= (enemy.AttackDamage - Armor);
+        if(parent.Type!= Unit.UnitType.Base)
+        GamePlayMenuHandler.inst.UpdateHPBarForUnit(parent,CurrentHealth);
+        if (parent.Type != Unit.UnitType.Base)
+            GamePlayMenuHandler.inst.UpdateHPBarForTower(parent, CurrentHealth);
         if (CurrentHealth < 0)
         {
-            DPanel.Add(this,"Unit type <color=yellow>["+parent.Type+"]</color> was <color=red>DIE</color>");
+            DPanel.Add(this, "Unit type <color=yellow>[" + parent.Type + "]</color> was <color=red>DIE</color>");
+            if (parent.Type == Unit.UnitType.Zombie)
+                GamePlayMenuHandler.inst.SetEnemiesCount(++GamePlayMenuHandler.inst.EnemyKilled);
+            if (parent.Type == Unit.UnitType.Soldier)
+                GamePlayMenuHandler.inst.SetSoldiersCount(--GamePlayMenuHandler.inst.SoldierAlive);
             Die();
             return;
         }
-        if(parent!=null && parent.AttackController != null)
-        parent.AttackController.UnderAttack(enemy);
+        if (parent != null && parent.AttackController != null)
+            parent.AttackController.UnderAttack(enemy);
     }
     public void SetParent(Unit parent) { this.parent = parent; }
 }

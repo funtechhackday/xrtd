@@ -9,9 +9,11 @@ public class UnitSpawner : MonoBehaviour {
         if (unitPrefab == null) return;
         var MB = MarkersManager.inst.GetMainBase();
         if (MB == null) return;
+        if (GamePlayMenuHandler.inst.GetCurStage(MenuUICanvas.inst.GetStageCount()).SoldiersCount <= GamePlayMenuHandler.inst.SoldierAlive) return;
         if(MarkersManager.inst.CanCreateNewSoldier())
         {
             var u = Instantiate(unitPrefab, MB.position, MB.rotation, transform).GetComponent<Unit>();
+            GamePlayMenuHandler.inst.SetSoldiersCount(++GamePlayMenuHandler.inst.SoldierAlive);
             if(u == null)
             {
                 Destroy(u);
